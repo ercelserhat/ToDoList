@@ -1,24 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Play-Bold.ttf">
+            <string>Play-Bold</string>
+        </array>
+        <array key="Play-Regular.ttf">
+            <string>Play-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.diamond" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="u56-Cq-u3r">
+                                <rect key="frame" x="118" y="78.333333333333314" width="157" height="153"/>
+                                <color key="tintColor" name="dark1"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoşgeldin, seni tekrar görmek güzel!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAL-Zq-ePM">
+                                <rect key="frame" x="30" y="260.66666666666669" width="333" height="65"/>
+                                <fontDescription key="fontDescription" name="Play-Bold" family="Play" pointSize="28"/>
+                                <color key="textColor" name="dark1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="i0r-Is-agt">
+                                <rect key="frame" x="30" y="375.66666666666669" width="333" height="50"/>
+                                <color key="backgroundColor" name="dark4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tkn-7W-cHs"/>
+                                </constraints>
+                                <color key="textColor" name="dark1"/>
+                                <fontDescription key="fontDescription" name="Play-Regular" family="Play" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Parola" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FCG-u7-23K">
+                                <rect key="frame" x="30" y="440.66666666666669" width="333" height="50"/>
+                                <color key="backgroundColor" name="dark4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xQo-WR-OcL"/>
+                                </constraints>
+                                <color key="textColor" name="dark1"/>
+                                <fontDescription key="fontDescription" name="Play-Regular" family="Play" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="email"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2C-Df-4Zm">
+                                <rect key="frame" x="30" y="540.66666666666663" width="333" height="50"/>
+                                <color key="backgroundColor" name="dark1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jak-L4-FwZ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Giriş">
+                                    <fontDescription key="titleFontDescription" name="Play-Bold" family="Play" pointSize="20"/>
+                                    <color key="baseForegroundColor" name="dark4"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kFb-hD-2MP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvd-P1-5or">
+                                <rect key="frame" x="30" y="756.33333333333337" width="333" height="31.666666666666629"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Hesabınız Yok mu? Hemen Kaydolun!">
+                                    <fontDescription key="titleFontDescription" name="Play-Bold" family="Play" pointSize="15"/>
+                                    <color key="baseForegroundColor" name="dark1"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hd6-Nx-PPL">
+                                <rect key="frame" x="30" y="495.66666666666669" width="333" height="30.000000000000057"/>
+                                <fontDescription key="fontDescription" name="Play-Regular" family="Play" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Parolamı Unuttum">
+                                    <color key="titleColor" name="dark1"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="dark3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i0r-Is-agt" secondAttribute="trailing" constant="30" id="00m-nS-Iml"/>
+                            <constraint firstItem="Hd6-Nx-PPL" firstAttribute="top" secondItem="FCG-u7-23K" secondAttribute="bottom" constant="5" id="03V-fE-jSb"/>
+                            <constraint firstItem="i0r-Is-agt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="0dw-U5-frC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t2C-Df-4Zm" secondAttribute="trailing" constant="30" id="1bz-Gq-LVz"/>
+                            <constraint firstItem="WAL-Zq-ePM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="2bo-k9-z3Q"/>
+                            <constraint firstItem="Xvd-P1-5or" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="8hE-lh-XLN"/>
+                            <constraint firstItem="t2C-Df-4Zm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="C28-gP-KfI"/>
+                            <constraint firstItem="u56-Cq-u3r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JfK-cC-2t7"/>
+                            <constraint firstItem="t2C-Df-4Zm" firstAttribute="top" secondItem="FCG-u7-23K" secondAttribute="bottom" constant="50" id="Jgm-U2-ujI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xvd-P1-5or" secondAttribute="bottom" constant="30" id="NHc-4p-9iN"/>
+                            <constraint firstItem="WAL-Zq-ePM" firstAttribute="top" secondItem="u56-Cq-u3r" secondAttribute="bottom" constant="30" id="UEL-ij-SCg"/>
+                            <constraint firstItem="Hd6-Nx-PPL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="WV9-HI-2Oh"/>
+                            <constraint firstItem="i0r-Is-agt" firstAttribute="top" secondItem="WAL-Zq-ePM" secondAttribute="bottom" constant="50" id="ceq-oD-sN0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FCG-u7-23K" secondAttribute="trailing" constant="30" id="eQc-Mu-ZHj"/>
+                            <constraint firstItem="FCG-u7-23K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hnJ-E2-El8"/>
+                            <constraint firstAttribute="trailing" secondItem="WAL-Zq-ePM" secondAttribute="trailing" constant="30" id="ijN-CP-zuH"/>
+                            <constraint firstItem="u56-Cq-u3r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="n8B-ss-BkP"/>
+                            <constraint firstItem="u56-Cq-u3r" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.2" id="uiL-Gd-KuR"/>
+                            <constraint firstAttribute="trailing" secondItem="Hd6-Nx-PPL" secondAttribute="trailing" constant="30" id="vf2-am-k0h"/>
+                            <constraint firstItem="FCG-u7-23K" firstAttribute="top" secondItem="i0r-Is-agt" secondAttribute="bottom" constant="15" id="xgL-ti-HYd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xvd-P1-5or" secondAttribute="trailing" constant="30" id="zLU-mZ-ng1"/>
+                            <constraint firstItem="u56-Cq-u3r" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.4" id="zia-83-scg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="i0r-Is-agt" id="QhK-uy-cdE"/>
+                        <outlet property="logoImageView" destination="u56-Cq-u3r" id="0sk-xq-9aS"/>
+                        <outlet property="passwordTextField" destination="FCG-u7-23K" id="m2b-9p-Z3b"/>
+                        <outlet property="welcomeLabel" destination="WAL-Zq-ePM" id="Njs-0y-GuI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="67.938931297709928" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark.diamond" catalog="system" width="128" height="124"/>
+        <namedColor name="dark1">
+            <color red="0.28627450980392155" green="0.32941176470588235" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="dark3">
+            <color red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="dark4">
+            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
