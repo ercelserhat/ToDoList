@@ -15,6 +15,7 @@
 		7AA1D1722A9E3C14004DA0E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA1D1702A9E3C14004DA0E5 /* LaunchScreen.storyboard */; };
 		7AA1D1C82A9E7A4D004DA0E5 /* Play-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AA1D1C72A9E7A4D004DA0E5 /* Play-Bold.ttf */; };
 		7AA1D1CA2A9E7A57004DA0E5 /* Play-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AA1D1C92A9E7A57004DA0E5 /* Play-Regular.ttf */; };
+		7AA1D1CC2A9F8422004DA0E5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA1D1CB2A9F8422004DA0E5 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7AA1D1732A9E3C14004DA0E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AA1D1C72A9E7A4D004DA0E5 /* Play-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Play-Bold.ttf"; sourceTree = "<group>"; };
 		7AA1D1C92A9E7A57004DA0E5 /* Play-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Play-Regular.ttf"; sourceTree = "<group>"; };
+		7AA1D1CB2A9F8422004DA0E5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +62,15 @@
 		7AA1D1642A9E3C13004DA0E5 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
-				7AA1D1C62A9E7A41004DA0E5 /* font */,
 				7AA1D1652A9E3C13004DA0E5 /* AppDelegate.swift */,
 				7AA1D1672A9E3C13004DA0E5 /* SceneDelegate.swift */,
 				7AA1D1692A9E3C13004DA0E5 /* ViewController.swift */,
+				7AA1D1CB2A9F8422004DA0E5 /* RegisterViewController.swift */,
 				7AA1D16B2A9E3C13004DA0E5 /* Main.storyboard */,
 				7AA1D16E2A9E3C14004DA0E5 /* Assets.xcassets */,
 				7AA1D1702A9E3C14004DA0E5 /* LaunchScreen.storyboard */,
 				7AA1D1732A9E3C14004DA0E5 /* Info.plist */,
+				7AA1D1C62A9E7A41004DA0E5 /* font */,
 			);
 			path = TodoList;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				7AA1D16A2A9E3C13004DA0E5 /* ViewController.swift in Sources */,
 				7AA1D1662A9E3C13004DA0E5 /* AppDelegate.swift in Sources */,
 				7AA1D1682A9E3C13004DA0E5 /* SceneDelegate.swift in Sources */,
+				7AA1D1CC2A9F8422004DA0E5 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
