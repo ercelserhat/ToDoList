@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
     
@@ -18,6 +19,29 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     @IBAction func register(_ sender: Any) {
+        if emailTextField.text != "" && passwordTextField.text != ""{
+            if passwordTextField.text == passwordAgainTextField.text{
+                Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!){authdataresult, error in
+                    if error != nil{
+                        self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Hata oluştu. Lütfen tekrar deneyin.")
+                    }else{
+                        self.performSegue(withIdentifier: "registerToMain", sender: nil)
+                    }
+                }
+            }else{
+                hataMesaji(titleInput: "HATA", messageInput: "Şifreler birbirine uymuyor!")
+            }
+        }else{
+            hataMesaji(titleInput: "HATA", messageInput: "Email veya şifre boş olamaz!")
+        }
+    }
+    
+    func hataMesaji(titleInput: String, messageInput: String){
+            let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "TAMAM", style: .default)
+            alert.addAction(okButton)
+            self.present(alert, animated: true)
     }
 }
