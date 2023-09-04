@@ -28,6 +28,7 @@
 		7AA1D1E12A9F883E004DA0E5 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA1D1E02A9F883E004DA0E5 /* FirebaseMessaging */; };
 		7AA1D1E32A9F883E004DA0E5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA1D1E22A9F883E004DA0E5 /* FirebaseStorage */; };
 		7AA1D1E52A9F8A5B004DA0E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA1D1E42A9F8A5B004DA0E5 /* MainViewController.swift */; };
+		7AA1D2072AA28BB2004DA0E5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA1D2062AA28BB2004DA0E5 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		7AA1D1CB2A9F8422004DA0E5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7AA1D1CD2A9F86A6004DA0E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7AA1D1E42A9F8A5B004DA0E5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7AA1D2062AA28BB2004DA0E5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				7AA1D1692A9E3C13004DA0E5 /* ViewController.swift */,
 				7AA1D1CB2A9F8422004DA0E5 /* RegisterViewController.swift */,
 				7AA1D1E42A9F8A5B004DA0E5 /* MainViewController.swift */,
+				7AA1D2062AA28BB2004DA0E5 /* SettingsViewController.swift */,
 				7AA1D16B2A9E3C13004DA0E5 /* Main.storyboard */,
 				7AA1D16E2A9E3C14004DA0E5 /* Assets.xcassets */,
 				7AA1D1702A9E3C14004DA0E5 /* LaunchScreen.storyboard */,
@@ -204,6 +207,7 @@
 				7AA1D1682A9E3C13004DA0E5 /* SceneDelegate.swift in Sources */,
 				7AA1D1CC2A9F8422004DA0E5 /* RegisterViewController.swift in Sources */,
 				7AA1D1E52A9F8A5B004DA0E5 /* MainViewController.swift in Sources */,
+				7AA1D2072AA28BB2004DA0E5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
