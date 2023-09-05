@@ -148,31 +148,52 @@
                                 <color key="textColor" name="dark1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bdw-Zs-zQr">
-                                <rect key="frame" x="30" y="335.33333333333331" width="333" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="İsminiz" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="96h-8V-gQE">
+                                <rect key="frame" x="30" y="305.33333333333331" width="333" height="50"/>
                                 <color key="backgroundColor" name="dark4"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="dQS-wK-OUe"/>
+                                    <constraint firstAttribute="height" constant="50" id="Lje-jy-F92"/>
+                                </constraints>
+                                <color key="textColor" name="dark1"/>
+                                <fontDescription key="fontDescription" name="Play-Regular" family="Play" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mc-Zl-JqG">
+                                <rect key="frame" x="30" y="790" width="333" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Hesabınız Var mı? Giriş Yapın!">
+                                    <fontDescription key="titleFontDescription" name="Play-Bold" family="Play" pointSize="15"/>
+                                    <color key="baseForegroundColor" name="dark1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="yfR-KZ-LKa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bdw-Zs-zQr">
+                                <rect key="frame" x="30" y="370.33333333333331" width="333" height="50"/>
+                                <color key="backgroundColor" name="dark4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Kh-95-gDg"/>
                                 </constraints>
                                 <color key="textColor" name="dark1"/>
                                 <fontDescription key="fontDescription" name="Play-Regular" family="Play" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Parola" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ipy-1b-w8I">
-                                <rect key="frame" x="30" y="400.33333333333331" width="333" height="50"/>
+                                <rect key="frame" x="30" y="435.33333333333331" width="333" height="50"/>
                                 <color key="backgroundColor" name="dark4"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="KMw-4c-lov"/>
+                                    <constraint firstAttribute="height" constant="50" id="wXZ-5R-82v"/>
                                 </constraints>
                                 <color key="textColor" name="dark1"/>
                                 <fontDescription key="fontDescription" name="Play-Regular" family="Play" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUS-Zx-mu9">
-                                <rect key="frame" x="30" y="535.33333333333337" width="333" height="50"/>
+                                <rect key="frame" x="30" y="570.33333333333337" width="333" height="50"/>
                                 <color key="backgroundColor" name="dark1"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="sOD-Eb-j8T"/>
+                                    <constraint firstAttribute="height" constant="50" id="Fi0-Ap-jG1"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
@@ -185,22 +206,11 @@
                                     <action selector="register:" destination="esc-JU-n9t" eventType="touchUpInside" id="qvT-Z1-IOG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mc-Zl-JqG">
-                                <rect key="frame" x="30" y="790" width="333" height="32"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Hesabınız Var mı? Giriş Yapın!">
-                                    <fontDescription key="titleFontDescription" name="Play-Bold" family="Play" pointSize="15"/>
-                                    <color key="baseForegroundColor" name="dark1"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="yfR-KZ-LKa"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Parola Tekrar" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oLL-IT-DIL">
-                                <rect key="frame" x="30" y="465.33333333333331" width="333" height="49.999999999999943"/>
+                                <rect key="frame" x="30" y="500.33333333333326" width="333" height="50"/>
                                 <color key="backgroundColor" name="dark4"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="GhS-Ez-kpn"/>
+                                    <constraint firstAttribute="height" constant="50" id="jA4-jZ-wfA"/>
                                 </constraints>
                                 <color key="textColor" name="dark1"/>
                                 <fontDescription key="fontDescription" name="Play-Regular" family="Play" pointSize="17"/>
@@ -210,25 +220,28 @@
                         <viewLayoutGuide key="safeArea" id="CyY-th-eYz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ipy-1b-w8I" firstAttribute="leading" secondItem="CyY-th-eYz" secondAttribute="leading" constant="30" id="6rb-6I-C45"/>
-                            <constraint firstItem="WUS-Zx-mu9" firstAttribute="top" secondItem="oLL-IT-DIL" secondAttribute="bottom" constant="20" id="85t-fI-sOH"/>
-                            <constraint firstItem="oLL-IT-DIL" firstAttribute="leading" secondItem="CyY-th-eYz" secondAttribute="leading" constant="30" id="9tk-pl-iCx"/>
+                            <constraint firstItem="CyY-th-eYz" firstAttribute="trailing" secondItem="WUS-Zx-mu9" secondAttribute="trailing" constant="30" id="21I-zf-ov0"/>
+                            <constraint firstItem="CyY-th-eYz" firstAttribute="trailing" secondItem="Ipy-1b-w8I" secondAttribute="trailing" constant="30" id="Am6-Y3-8ZW"/>
                             <constraint firstItem="6Nr-RK-sk5" firstAttribute="width" secondItem="CyY-th-eYz" secondAttribute="width" multiplier="0.4" id="AqC-YF-Hj1"/>
-                            <constraint firstItem="CyY-th-eYz" firstAttribute="trailing" secondItem="oLL-IT-DIL" secondAttribute="trailing" constant="30" id="B9q-4R-nuf"/>
-                            <constraint firstItem="oLL-IT-DIL" firstAttribute="top" secondItem="Ipy-1b-w8I" secondAttribute="bottom" constant="15" id="CRi-05-lqV"/>
+                            <constraint firstItem="oLL-IT-DIL" firstAttribute="leading" secondItem="CyY-th-eYz" secondAttribute="leading" constant="30" id="ArA-ea-DSC"/>
+                            <constraint firstItem="CyY-th-eYz" firstAttribute="trailing" secondItem="96h-8V-gQE" secondAttribute="trailing" constant="30" id="CoT-Fb-h4U"/>
+                            <constraint firstItem="bdw-Zs-zQr" firstAttribute="top" secondItem="96h-8V-gQE" secondAttribute="bottom" constant="15" id="ELZ-dj-fzW"/>
+                            <constraint firstItem="Ipy-1b-w8I" firstAttribute="leading" secondItem="CyY-th-eYz" secondAttribute="leading" constant="30" id="EWe-pU-d67"/>
+                            <constraint firstItem="Ipy-1b-w8I" firstAttribute="top" secondItem="bdw-Zs-zQr" secondAttribute="bottom" constant="15" id="FFs-jA-YY5"/>
+                            <constraint firstItem="CyY-th-eYz" firstAttribute="trailing" secondItem="oLL-IT-DIL" secondAttribute="trailing" constant="30" id="Fza-rG-qfN"/>
                             <constraint firstItem="CyY-th-eYz" firstAttribute="trailing" secondItem="5mc-Zl-JqG" secondAttribute="trailing" constant="30" id="HBO-LQ-lmk"/>
-                            <constraint firstItem="CyY-th-eYz" firstAttribute="trailing" secondItem="bdw-Zs-zQr" secondAttribute="trailing" constant="30" id="M9m-4E-jrb"/>
-                            <constraint firstItem="CyY-th-eYz" firstAttribute="trailing" secondItem="Ipy-1b-w8I" secondAttribute="trailing" constant="30" id="Nq0-Hw-wqN"/>
-                            <constraint firstItem="bdw-Zs-zQr" firstAttribute="top" secondItem="w99-JN-dU9" secondAttribute="bottom" constant="50" id="Pac-AM-rFg"/>
-                            <constraint firstItem="CyY-th-eYz" firstAttribute="trailing" secondItem="WUS-Zx-mu9" secondAttribute="trailing" constant="30" id="Q6z-yy-p1O"/>
                             <constraint firstItem="5mc-Zl-JqG" firstAttribute="leading" secondItem="CyY-th-eYz" secondAttribute="leading" constant="30" id="Qos-Hk-DYh"/>
                             <constraint firstItem="w99-JN-dU9" firstAttribute="leading" secondItem="CyY-th-eYz" secondAttribute="leading" constant="30" id="Vu0-q4-E0D"/>
-                            <constraint firstItem="WUS-Zx-mu9" firstAttribute="leading" secondItem="CyY-th-eYz" secondAttribute="leading" constant="30" id="dhZ-yL-eTh"/>
+                            <constraint firstItem="CyY-th-eYz" firstAttribute="trailing" secondItem="bdw-Zs-zQr" secondAttribute="trailing" constant="30" id="XOv-Lr-JHt"/>
+                            <constraint firstItem="oLL-IT-DIL" firstAttribute="top" secondItem="Ipy-1b-w8I" secondAttribute="bottom" constant="15" id="YVW-1z-YYd"/>
                             <constraint firstItem="CyY-th-eYz" firstAttribute="trailing" secondItem="w99-JN-dU9" secondAttribute="trailing" constant="30" id="gGI-pM-lyj"/>
                             <constraint firstItem="6Nr-RK-sk5" firstAttribute="height" secondItem="CyY-th-eYz" secondAttribute="height" multiplier="0.2" id="gat-MM-n33"/>
-                            <constraint firstItem="bdw-Zs-zQr" firstAttribute="leading" secondItem="CyY-th-eYz" secondAttribute="leading" constant="30" id="geM-sF-7KQ"/>
-                            <constraint firstItem="Ipy-1b-w8I" firstAttribute="top" secondItem="bdw-Zs-zQr" secondAttribute="bottom" constant="15" id="mAm-14-rrD"/>
+                            <constraint firstItem="96h-8V-gQE" firstAttribute="leading" secondItem="CyY-th-eYz" secondAttribute="leading" constant="30" id="me5-wt-eXQ"/>
+                            <constraint firstItem="96h-8V-gQE" firstAttribute="top" secondItem="w99-JN-dU9" secondAttribute="bottom" constant="20" id="nru-i3-rBd"/>
                             <constraint firstItem="6Nr-RK-sk5" firstAttribute="top" secondItem="CyY-th-eYz" secondAttribute="top" constant="20" id="oRA-Px-vvs"/>
+                            <constraint firstItem="bdw-Zs-zQr" firstAttribute="leading" secondItem="CyY-th-eYz" secondAttribute="leading" constant="30" id="oy0-62-Tks"/>
+                            <constraint firstItem="WUS-Zx-mu9" firstAttribute="leading" secondItem="CyY-th-eYz" secondAttribute="leading" constant="30" id="pYs-h3-AHk"/>
+                            <constraint firstItem="WUS-Zx-mu9" firstAttribute="top" secondItem="oLL-IT-DIL" secondAttribute="bottom" constant="20" id="sHP-Zn-Mgn"/>
                             <constraint firstItem="CyY-th-eYz" firstAttribute="bottom" secondItem="5mc-Zl-JqG" secondAttribute="bottom" constant="30" id="wAH-tl-7k5"/>
                             <constraint firstItem="6Nr-RK-sk5" firstAttribute="centerX" secondItem="FQ9-hM-j1B" secondAttribute="centerX" id="wjb-jC-aUe"/>
                             <constraint firstItem="w99-JN-dU9" firstAttribute="top" secondItem="6Nr-RK-sk5" secondAttribute="bottom" constant="30" id="yzH-ma-k8k"/>
@@ -238,6 +251,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="bdw-Zs-zQr" id="Tf4-Zq-qb1"/>
                         <outlet property="logoImageView" destination="6Nr-RK-sk5" id="50b-5P-wEi"/>
+                        <outlet property="nameTextField" destination="96h-8V-gQE" id="PJp-7D-VQ1"/>
                         <outlet property="passwordAgainTextField" destination="oLL-IT-DIL" id="7lp-Eh-IPf"/>
                         <outlet property="passwordTextField" destination="Ipy-1b-w8I" id="e6h-UA-mHI"/>
                         <outlet property="welcomeLabel" destination="w99-JN-dU9" id="Kvp-yl-xVV"/>
@@ -312,13 +326,13 @@
                                         <color key="tintColor" name="dark4"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serhat Erçel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ5-yA-80s">
-                                        <rect key="frame" x="138" y="116.66666666666667" width="245" height="26.666666666666671"/>
+                                        <rect key="frame" x="138" y="116.66666666666669" width="245" height="27"/>
                                         <fontDescription key="fontDescription" name="Play-Bold" family="Play" pointSize="23"/>
                                         <color key="textColor" name="dark4"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ercelserhat@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-fx-qBr">
-                                        <rect key="frame" x="138" y="148.33333333333334" width="245" height="20"/>
+                                        <rect key="frame" x="138" y="148.66666666666666" width="245" height="20"/>
                                         <fontDescription key="fontDescription" name="Play-Regular" family="Play" pointSize="17"/>
                                         <color key="textColor" name="dark4"/>
                                         <nil key="highlightedColor"/>
@@ -380,8 +394,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="i8x-L1-UR5"/>
-        <segue reference="E5q-uD-KWl"/>
+        <segue reference="8iv-u9-a9d"/>
+        <segue reference="yfR-KZ-LKa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.diamond" catalog="system" width="128" height="124"/>
