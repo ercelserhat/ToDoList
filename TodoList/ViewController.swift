@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(klavyeyiKapat))
+        view.addGestureRecognizer(gestureRecognizer)
     }
     
     @IBAction func login(_ sender: Any) {
@@ -38,6 +41,10 @@ class ViewController: UIViewController {
             let okButton = UIAlertAction(title: "TAMAM", style: .default)
             alert.addAction(okButton)
             self.present(alert, animated: true)
+    }
+    
+    @objc func klavyeyiKapat(){
+        view.endEditing(true)
     }
 }
 
