@@ -74,7 +74,7 @@ class AddTodoViewController: UIViewController {
                 aciklama = descriptionTextView.text
             }
             let firestoreDatabase = Firestore.firestore()
-            let firestorePost = ["email" : Auth.auth().currentUser!.email!, "baslik" : titleTextField.text!, "tarih" : dateTextField.text!, "aciklama" : aciklama, "oncelik" : prioritySegmentedControl.selectedSegmentIndex, "eklenme_tarihi" : FieldValue.serverTimestamp()] as [String : Any]
+            let firestorePost = ["email" : Auth.auth().currentUser!.email!, "baslik" : titleTextField.text!, "tarih" : dateTextField.text!, "aciklama" : aciklama, "oncelik" : prioritySegmentedControl.selectedSegmentIndex, "eklenme_tarihi" : FieldValue.serverTimestamp(), "durum" : 0] as [String : Any]
             firestoreDatabase.collection("Tasks").addDocument(data: firestorePost){error in
                 if error != nil{
                     self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Bir hata oluştu. Lütfen tekrar deneyin.")
