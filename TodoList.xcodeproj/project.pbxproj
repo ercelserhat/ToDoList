@@ -32,6 +32,7 @@
 		7AF22BEF2AA90D69007046E7 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF22BEE2AA90D69007046E7 /* AddTodoViewController.swift */; };
 		7AF22BF12AA9BF0D007046E7 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF22BF02AA9BF0D007046E7 /* TaskTableViewCell.swift */; };
 		7AF22BF32AA9C2FC007046E7 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF22BF22AA9C2FC007046E7 /* Tasks.swift */; };
+		7AF22BF52AAB0134007046E7 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF22BF42AAB0134007046E7 /* UpdateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		7AF22BEE2AA90D69007046E7 /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 		7AF22BF02AA9BF0D007046E7 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		7AF22BF22AA9C2FC007046E7 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		7AF22BF42AAB0134007046E7 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				7AA1D2062AA28BB2004DA0E5 /* SettingsViewController.swift */,
 				7AF22BEE2AA90D69007046E7 /* AddTodoViewController.swift */,
 				7AF22BF22AA9C2FC007046E7 /* Tasks.swift */,
+				7AF22BF42AAB0134007046E7 /* UpdateViewController.swift */,
 				7AA1D16B2A9E3C13004DA0E5 /* Main.storyboard */,
 				7AA1D16E2A9E3C14004DA0E5 /* Assets.xcassets */,
 				7AA1D1702A9E3C14004DA0E5 /* LaunchScreen.storyboard */,
@@ -220,6 +223,7 @@
 				7AA1D1E52A9F8A5B004DA0E5 /* MainViewController.swift in Sources */,
 				7AF22BF32AA9C2FC007046E7 /* Tasks.swift in Sources */,
 				7AA1D2072AA28BB2004DA0E5 /* SettingsViewController.swift in Sources */,
+				7AF22BF52AAB0134007046E7 /* UpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

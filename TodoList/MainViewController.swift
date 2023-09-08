@@ -65,6 +65,14 @@ class MainViewController: UIViewController {
             alert.addAction(okButton)
             self.present(alert, animated: true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indeks = sender as? Int
+        if segue.identifier == "toUpdate"{
+            let gidilecekVC = segue.destination as! UpdateViewController
+            gidilecekVC.gelenTask = taskList[indeks!]
+        }
+    }
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource{
@@ -105,4 +113,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toUpdate", sender: indexPath.row)
+    }
+    
+    //Animation cell
+    /*func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row % 2 == 0{
+            UIView.animate(withDuration: 0.3, delay: 0.5 * Double(indexPath.row), options: [.curveEaseInOut], animations: {
+                        cell.transform = CGAffineTransform(translationX: cell.contentView.frame.width, y: 0)
+                    }, completion: nil)
+        }else{
+            UIView.animate(withDuration: 0.3, delay: 0.5 * Double(indexPath.row), options: [.curveEaseInOut], animations: {
+                        cell.transform = CGAffineTransform(translationX: -cell.contentView.frame.width, y: 0)
+                    }, completion: nil)
+        }
+    }*/
 }
