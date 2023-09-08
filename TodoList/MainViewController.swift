@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
     
     func tumVerileriAl(){
         let firestoreDatabase = Firestore.firestore()
-        firestoreDatabase.collection("Tasks").whereField("email", isEqualTo: Auth.auth().currentUser!.email!).order(by: "eklenme_tarihi", descending: false).addSnapshotListener{snapShot, error in
+        firestoreDatabase.collection("Tasks").whereField("email", isEqualTo: Auth.auth().currentUser!.email!).whereField("durum", isEqualTo: 0).order(by: "eklenme_tarihi", descending: false).addSnapshotListener{snapShot, error in
             if error != nil{
                 self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Bir hata oluştu. Lütfen tekrar deneyin.")
                 print(error!)
@@ -104,13 +104,22 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "SİL", handler: {contextualaction, view, boolValue in
             let task = self.taskList[indexPath.row]
             let firestoreDatabase = Firestore.firestore()
             firestoreDatabase.collection("Tasks").document(task.documentId).delete()
         })
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let doneAction = UIContextualAction(style: .normal, title: "TAMAM", handler: {contextualaction, view, boolValue in
+            let fireStoreDatabase = Firestore.firestore()
+            let task = self.taskList[indexPath.row]
+            fireStoreDatabase.collection("Tasks").document(task.documentId).updateData(["durum" : 1])
+        })
+        return UISwipeActionsConfiguration(actions: [doneAction])
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
