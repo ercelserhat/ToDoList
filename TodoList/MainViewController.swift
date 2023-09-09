@@ -119,6 +119,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             let task = self.taskList[indexPath.row]
             fireStoreDatabase.collection("Tasks").document(task.documentId).updateData(["durum" : 1])
         })
+        doneAction.image = UIImage(systemName: "checkmark.diamond")?.withTintColor(UIColor.white, renderingMode: UIImage.RenderingMode.alwaysOriginal)
+        doneAction.backgroundColor = UIColor.systemGreen
         return UISwipeActionsConfiguration(actions: [doneAction])
     }
     
