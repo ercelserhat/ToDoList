@@ -29,6 +29,7 @@
 		7AA1D1E32A9F883E004DA0E5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA1D1E22A9F883E004DA0E5 /* FirebaseStorage */; };
 		7AA1D1E52A9F8A5B004DA0E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA1D1E42A9F8A5B004DA0E5 /* MainViewController.swift */; };
 		7AA1D2072AA28BB2004DA0E5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA1D2062AA28BB2004DA0E5 /* SettingsViewController.swift */; };
+		7ABEEEC12AAD360100A3F5B9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEEEC02AAD360100A3F5B9 /* ChangePasswordViewController.swift */; };
 		7AF22BEF2AA90D69007046E7 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF22BEE2AA90D69007046E7 /* AddTodoViewController.swift */; };
 		7AF22BF12AA9BF0D007046E7 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF22BF02AA9BF0D007046E7 /* TaskTableViewCell.swift */; };
 		7AF22BF32AA9C2FC007046E7 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF22BF22AA9C2FC007046E7 /* Tasks.swift */; };
@@ -50,6 +51,7 @@
 		7AA1D1CD2A9F86A6004DA0E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7AA1D1E42A9F8A5B004DA0E5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7AA1D2062AA28BB2004DA0E5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7ABEEEC02AAD360100A3F5B9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		7AF22BEE2AA90D69007046E7 /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 		7AF22BF02AA9BF0D007046E7 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		7AF22BF22AA9C2FC007046E7 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				7AA1D1732A9E3C14004DA0E5 /* Info.plist */,
 				7AA1D1CD2A9F86A6004DA0E5 /* GoogleService-Info.plist */,
 				7AA1D1C62A9E7A41004DA0E5 /* font */,
+				7ABEEEC02AAD360100A3F5B9 /* ChangePasswordViewController.swift */,
 			);
 			path = TodoList;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABEEEC12AAD360100A3F5B9 /* ChangePasswordViewController.swift in Sources */,
 				7AF22BF12AA9BF0D007046E7 /* TaskTableViewCell.swift in Sources */,
 				7AA1D16A2A9E3C13004DA0E5 /* ViewController.swift in Sources */,
 				7AF22BEF2AA90D69007046E7 /* AddTodoViewController.swift in Sources */,

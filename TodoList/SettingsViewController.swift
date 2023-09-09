@@ -10,10 +10,27 @@ import Firebase
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userEmailLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let firestoreDatabase = Firestore.firestore()
+        if let emailString = Auth.auth().currentUser?.email{
+            firestoreDatabase.collection("User").whereField("email", isEqualTo: emailString).getDocuments{snapShot, error in
+                    if snapShot?.isEmpty != true && snapShot != nil{
+                        for document in snapShot!.documents{
+                            self.userNameLabel.text = document.get("name") as? String
+                            self.userEmailLabel.text = document.get("email") as? String
+                        }
+                    }
+            }
+        }
     }
 
     @IBAction func logout(_ sender: Any) {

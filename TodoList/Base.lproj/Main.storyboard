@@ -203,7 +203,6 @@
                                     <color key="baseForegroundColor" name="dark4"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rmw-vu-nnc"/>
                                     <action selector="register:" destination="esc-JU-n9t" eventType="touchUpInside" id="qvT-Z1-IOG"/>
                                 </connections>
                             </button>
@@ -427,13 +426,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yc-gl-FNW">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="281"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serhat Erçel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ5-yA-80s">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ5-yA-80s">
                                         <rect key="frame" x="20" y="201.33333333333334" width="353" height="26.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Play-Bold" family="Play" pointSize="23"/>
                                         <color key="textColor" name="dark4"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ercelserhat@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-fx-qBr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@email.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-fx-qBr">
                                         <rect key="frame" x="20" y="233" width="353" height="20"/>
                                         <fontDescription key="fontDescription" name="Play-Regular" family="Play" pointSize="17"/>
                                         <color key="textColor" name="dark4"/>
@@ -492,6 +491,9 @@
                                     <fontDescription key="titleFontDescription" name="Play-Regular" family="Play" pointSize="17"/>
                                     <color key="baseForegroundColor" name="dark1"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="FHb-NU-DRI" kind="show" id="IYo-aN-Oek"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0Z-EX-GIU">
                                 <rect key="frame" x="10" y="393.33333333333331" width="373" height="1"/>
@@ -707,12 +709,101 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Ayarlar" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="ftf-wf-TIk"/>
                     <connections>
+                        <outlet property="profileImageView" destination="9YE-IG-ULd" id="F52-Cw-6Kc"/>
+                        <outlet property="userEmailLabel" destination="8Ob-fx-qBr" id="HfY-DG-h3e"/>
+                        <outlet property="userNameLabel" destination="mQ5-yA-80s" id="uCa-Me-Nwk"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="E5q-uD-KWl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iT6-HL-lGX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1617.5572519083969" y="1271.8309859154931"/>
+        </scene>
+        <!--Change Password View Controller-->
+        <scene sceneID="ZiK-KG-vRb">
+            <objects>
+                <viewController id="FHb-NU-DRI" customClass="ChangePasswordViewController" customModule="TodoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RYK-V6-zzL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.diamond" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9s9-f7-whs">
+                                <rect key="frame" x="118" y="99.333333333333343" width="157" height="169.66666666666666"/>
+                                <color key="tintColor" name="dark1"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yeni Şifre" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="F2q-d7-aIh">
+                                <rect key="frame" x="30" y="376" width="333" height="50"/>
+                                <color key="backgroundColor" name="dark4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jk4-rm-L4p"/>
+                                </constraints>
+                                <color key="textColor" name="dark1"/>
+                                <fontDescription key="fontDescription" name="Play-Regular" family="Play" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jug-VK-D95">
+                                <rect key="frame" x="30" y="516" width="333" height="50"/>
+                                <color key="backgroundColor" name="dark1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4L1-bO-0Kt"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Kaydet">
+                                    <fontDescription key="titleFontDescription" name="Play-Bold" family="Play" pointSize="20"/>
+                                    <color key="baseForegroundColor" name="dark4"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButton:" destination="FHb-NU-DRI" eventType="touchUpInside" id="o6S-2L-vss"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yeni Şifre Tekrar" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Pmw-VD-8ce">
+                                <rect key="frame" x="30" y="441" width="333" height="50"/>
+                                <color key="backgroundColor" name="dark4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YpG-O0-clB"/>
+                                </constraints>
+                                <color key="textColor" name="dark1"/>
+                                <fontDescription key="fontDescription" name="Play-Regular" family="Play" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifrenizi değiştirin" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsE-kN-vUS">
+                                <rect key="frame" x="30" y="318.33333333333331" width="333" height="32.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Play-Bold" family="Play" pointSize="28"/>
+                                <color key="textColor" name="dark1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gdG-5L-0ms"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9s9-f7-whs" firstAttribute="centerX" secondItem="RYK-V6-zzL" secondAttribute="centerX" id="1Xl-09-kWw"/>
+                            <constraint firstItem="Pmw-VD-8ce" firstAttribute="top" secondItem="F2q-d7-aIh" secondAttribute="bottom" constant="15" id="2Op-ME-vht"/>
+                            <constraint firstItem="9s9-f7-whs" firstAttribute="width" secondItem="gdG-5L-0ms" secondAttribute="width" multiplier="0.4" id="2j8-lf-iAQ"/>
+                            <constraint firstItem="9s9-f7-whs" firstAttribute="top" secondItem="gdG-5L-0ms" secondAttribute="top" constant="100" id="5pX-DY-ZqA"/>
+                            <constraint firstItem="gdG-5L-0ms" firstAttribute="trailing" secondItem="MsE-kN-vUS" secondAttribute="trailing" constant="30" id="6dd-xG-iLb"/>
+                            <constraint firstItem="MsE-kN-vUS" firstAttribute="leading" secondItem="gdG-5L-0ms" secondAttribute="leading" constant="30" id="7DK-vr-ut6"/>
+                            <constraint firstItem="F2q-d7-aIh" firstAttribute="leading" secondItem="gdG-5L-0ms" secondAttribute="leading" constant="30" id="DeB-PR-lre"/>
+                            <constraint firstItem="gdG-5L-0ms" firstAttribute="trailing" secondItem="jug-VK-D95" secondAttribute="trailing" constant="30" id="HCx-Fd-3mX"/>
+                            <constraint firstItem="F2q-d7-aIh" firstAttribute="top" secondItem="MsE-kN-vUS" secondAttribute="bottom" constant="25" id="Iyn-RS-ExK"/>
+                            <constraint firstItem="MsE-kN-vUS" firstAttribute="top" secondItem="9s9-f7-whs" secondAttribute="bottom" constant="50" id="JhB-wc-4O9"/>
+                            <constraint firstItem="jug-VK-D95" firstAttribute="leading" secondItem="gdG-5L-0ms" secondAttribute="leading" constant="30" id="LHS-n7-SeO"/>
+                            <constraint firstItem="9s9-f7-whs" firstAttribute="height" secondItem="gdG-5L-0ms" secondAttribute="height" multiplier="0.2" id="Nvf-Xh-Qo4"/>
+                            <constraint firstItem="jug-VK-D95" firstAttribute="top" secondItem="Pmw-VD-8ce" secondAttribute="bottom" constant="25" id="Zhr-Hc-jyg"/>
+                            <constraint firstItem="Pmw-VD-8ce" firstAttribute="leading" secondItem="gdG-5L-0ms" secondAttribute="leading" constant="30" id="aPa-jG-Axt"/>
+                            <constraint firstItem="gdG-5L-0ms" firstAttribute="trailing" secondItem="Pmw-VD-8ce" secondAttribute="trailing" constant="30" id="ug1-LJ-35D"/>
+                            <constraint firstItem="gdG-5L-0ms" firstAttribute="trailing" secondItem="F2q-d7-aIh" secondAttribute="trailing" constant="30" id="wtP-6K-ze5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HCu-AP-MPe"/>
+                    <connections>
+                        <outlet property="newPassAgainTextField" destination="Pmw-VD-8ce" id="N6Z-fV-ba6"/>
+                        <outlet property="newPassTextField" destination="F2q-d7-aIh" id="jy5-99-S37"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tS0-ZO-9fu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2369" y="1272"/>
         </scene>
         <!--Ekle-->
         <scene sceneID="baI-LN-iMS">
@@ -1041,7 +1132,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="8iv-u9-a9d"/>
-        <segue reference="E5q-uD-KWl"/>
+        <segue reference="yfR-KZ-LKa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
