@@ -38,7 +38,7 @@ class SettingsViewController: UIViewController {
         let okAction = UIAlertAction(title: "Tamam", style: .destructive){action in
             let firestoreDatabase = Firestore.firestore()
             if let emailString = Auth.auth().currentUser?.email{
-                firestoreDatabase.collection("Tasks").whereField("email", isEqualTo: emailString).addSnapshotListener{snapShot, error in
+                firestoreDatabase.collection("Tasks").whereField("email", isEqualTo: emailString).getDocuments{snapShot, error in
                     if error != nil{
                         self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Bir hata oluştu. Lütfen tekrar deneyin.")
                         print(error!)
@@ -51,7 +51,7 @@ class SettingsViewController: UIViewController {
                         }
                     }
                 }
-                firestoreDatabase.collection("User").whereField("email", isEqualTo: emailString).addSnapshotListener{snapShot, error in
+                firestoreDatabase.collection("User").whereField("email", isEqualTo: emailString).getDocuments{snapShot, error in
                     if error != nil{
                         self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Bir hata oluştu. Lütfen tekrar deneyin.")
                         print(error!)
