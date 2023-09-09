@@ -31,4 +31,54 @@ class SettingsViewController: UIViewController {
             alert.addAction(okButton)
             self.present(alert, animated: true)
     }
+    
+    @IBAction func deleteMyAccount(_ sender: Any) {
+        let alert = UIAlertController(title: "HESABINIZ SİLİNECEK", message: "Onaylıyor musunuz?\nBu işlem geri alınamaz.", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "İptal", style: .cancel)
+        let okAction = UIAlertAction(title: "Tamam", style: .destructive){action in
+            let firestoreDatabase = Firestore.firestore()
+            if let emailString = Auth.auth().currentUser?.email{
+                firestoreDatabase.collection("Tasks").whereField("email", isEqualTo: emailString).addSnapshotListener{snapShot, error in
+                    if error != nil{
+                        self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Bir hata oluştu. Lütfen tekrar deneyin.")
+                        print(error!)
+                    }else{
+                        if snapShot?.isEmpty != true && snapShot != nil{
+                            for document in snapShot!.documents{
+                                let documentId = document.documentID
+                                firestoreDatabase.collection("Tasks").document(documentId).delete()
+                            }
+                        }
+                    }
+                }
+                firestoreDatabase.collection("User").whereField("email", isEqualTo: emailString).addSnapshotListener{snapShot, error in
+                    if error != nil{
+                        self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Bir hata oluştu. Lütfen tekrar deneyin.")
+                        print(error!)
+                    }else{
+                        if snapShot?.isEmpty != true && snapShot != nil{
+                            for document in snapShot!.documents{
+                                let documentId = document.documentID
+                                firestoreDatabase.collection("User").document(documentId).delete()
+                            }
+                        }
+                    }
+                }
+            }
+            Auth.auth().currentUser?.delete(){error in
+                if error != nil{
+                    self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Bir hata oluştu. Lütfen tekrar deneyin.")
+                }
+                do{
+                    try Auth.auth().signOut()
+                    self.performSegue(withIdentifier: "toViewController", sender: nil)
+                }catch{
+                    self.hataMesaji(titleInput: "HATA", messageInput: "Hata oluştu. Lütfen tekrar deneyin.")
+                }
+            }
+        }
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
+    }
 }

@@ -644,6 +644,9 @@
                                     <fontDescription key="titleFontDescription" name="Play-Regular" family="Play" pointSize="17"/>
                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteMyAccount:" destination="n7X-PY-FZp" eventType="touchUpInside" id="f5y-8u-KVU"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1s-91-01f">
                                 <rect key="frame" x="10" y="615.33333333333337" width="373" height="1"/>
